@@ -1,0 +1,4 @@
+# NHB website - staging copy
+# Not for indexing before launch day. Replaced on launch day.
+User-agent: *
+Disallow: /

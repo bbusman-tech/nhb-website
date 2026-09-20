@@ -1,0 +1,27 @@
+# NHB website - static site, no build step.
+# Netlify publishes the repository root as it is: no build command,
+# no publish directory set, so the root is served.
+
+# Staging: keep every page out of search engines until launch day.
+# On launch day this header block is removed.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Launch day: the domain moves here plus www is sent to the bare domain.
+[[redirects]]
+  from = "https://www.nhb-consultancy.com/*"
+  to = "https://nhb-consultancy.com/:splat"
+  status = 301
+  force = true
