@@ -21,8 +21,8 @@
 
 # Launch day: the domain moves here plus www is sent to the bare domain.
 [[redirects]]
-  from = "https://www.nhb-consultancy.com/*"
-  to = "https://nhb-consultancy.com/:splat"
+  from = "https://www.nhb-tech.com/*"
+  to = "https://nhb-tech.com/:splat"
   status = 301
   force = true
 

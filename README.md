@@ -1,6 +1,6 @@
 # NHB website
 
-The public website of NHB at nhb-consultancy.com: NHB Consultancy beside NHB Technology.
+The public website of NHB Technology at nhb-tech.com: NHB Technology plus its two products, ONE by NHB plus UPFRONT by NHB. This repository is bbusman-tech/nhb-website.
 
 Plain HTML plus CSS. No build step, no framework, no JavaScript, no database, no server functions. Netlify publishes this folder as it is.
 
