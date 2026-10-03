@@ -156,3 +156,44 @@ address{font-style:normal}
 }
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Round v6: accepted review proposals P1-P8. */
+@media (max-width:759px){
+  /* P2: 404 phone actions and vertical rhythm. */
+  .hero.centre{padding-block:56px 48px}
+  .centre .rule{margin-top:20px}
+  .centre .lead{margin-top:20px}
+  .centre .btn-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+  .centre .btn{width:100%}
+
+  /* P3: tighter mobile footer transitions, same order and link spacing. */
+  .footer-grid{gap:24px}
+  .footer-brand img{margin-bottom:6px}
+  .footer-legal{margin-top:28px}
+
+  /* P5: repeated single-content product bands. */
+  .product-single{padding-block:48px}
+
+  /* P6: technology-home phone hero. */
+  .technology-hero{padding-block:56px 42px}
+  .technology-hero .hero-pair{gap:32px}
+
+  /* P8: front-door phone hero keeps the image in markup but does not display it. */
+  .hero-home .hero-mark{display:none}
+}
+
+/* Round v7 B1: prevent 404 action words breaking at 320px while retaining P2 at 360px and 390px. */
+@media (max-width:339px){
+  .hero.centre .btn-row{grid-template-columns:1fr}
+}
+
+@media (min-width:1100px){
+  /* P1: centre the 404 action row under the sentence. */
+  .centre .btn-row{justify-content:center}
+
+  /* P4: restore the contact join after the large-screen band padding rule. */
+  .band-join{padding-top:0}
+
+  /* P7: cap and centre the desktop product-image frame. */
+  .ph-img{max-width:1080px;margin-inline:auto}
+}
